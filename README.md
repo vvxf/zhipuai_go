@@ -34,26 +34,27 @@ To run the application and test the local function:
     ./zhipuai_go
     ```
 3. The application will execute a sample request to the Language Model API and print the response to the console.
+   ### Example
    ```go
-  func main() {
-      initConfig()
-  
-      apiURL := getAPIURL()
-      apiKey := getAPIKey()
-  
-      // 初始化应用层服务
-      appService := application.NewLLMApplicationService(apiURL, apiKey)
-  
-      resp, _ := appService.HandleRequest("glm-4-flash", []domain.Message{
-          {
-              Role:    "user",
-              Content: "Hello, llm!",
-          },
-      })
-  
-      fmt.Println(resp.Choices[0].Message.Content)
-  }
-  ```
+    func main() {
+        initConfig()
+        
+        apiURL := getAPIURL()
+        apiKey := getAPIKey()
+        
+        // init application
+        appService := application.NewLLMApplicationService(apiURL, apiKey)
+        
+        resp, _ := appService.HandleRequest("glm-4-flash", []domain.Message{
+            {
+                Role:    "user",
+                Content: "Hello, llm!",
+            },
+        })
+        
+        fmt.Println(resp.Choices[0].Message.Content)
+    }
+    ```
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
