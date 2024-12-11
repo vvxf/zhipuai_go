@@ -39,8 +39,8 @@ To run the application and test the local function:
     func main() {
         initConfig()
         
-        apiURL := getAPIURL()
-        apiKey := getAPIKey()
+        apiURL := "https://open.bigmodel.cn/api/paas/v4/chat/completions"
+        apiKey := "YOUR_API_KEY"
         
         // init application
         appService := application.NewLLMApplicationService(apiURL, apiKey)
