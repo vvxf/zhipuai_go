@@ -59,5 +59,5 @@ To run the application and test the local function:
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ## Contact
-For any questions or suggestions, please open an issue on GitHub.
+For any questions or suggestions, please open an issue on GitHub or reach out to us at `zhipuaigo @ outlook.com`.
 Thank you for using zhipuai_go!
