@@ -36,9 +36,7 @@ To run the application and test the local function:
 3. The application will execute a sample request to the Language Model API and print the response to the console.
    ### Example
    ```go
-    func main() {
-        initConfig()
-        
+    func main() {        
         apiURL := "https://open.bigmodel.cn/api/paas/v4/chat/completions"
         apiKey := "YOUR_API_KEY"
         
