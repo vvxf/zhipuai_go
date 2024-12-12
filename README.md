@@ -24,34 +24,31 @@ ZhipuaiGo is a Go-based application that provides an interface to interact with 
     key = "YOUR_API_KEY"
     ```
 ## Usage
-To run the application and test the local function:
-1. Build the application:
-    ```sh
-    go build
-    ```
-2. Run the application:
-    ```sh
-    ./zhipuai_go
-    ```
-3. The application will execute a sample request to the Language Model API and print the response to the console.
-   ### Example
    ```go
-    func main() {        
+    package main
+
+    import (
+        "fmt"
+        "github.com/vvxf/zhipuai_go/api"
+    )
+
+    func main() {
         apiURL := "https://open.bigmodel.cn/api/paas/v4/chat/completions"
-        apiKey := "YOUR_API_KEY"
-        
+        apiKey := ""
+
         // init application
-        appService := application.NewLLMApplicationService(apiURL, apiKey)
-        
-        resp, _ := appService.HandleRequest("glm-4-flash", []domain.Message{
+        appService := api.NewLLMApplicationService(apiURL, apiKey)
+
+        resp, _ := appService.HandleRequest("glm-4-flash", []api.Message{
             {
                 Role:    "user",
                 Content: "Hello, llm!",
             },
         })
-        
+
         fmt.Println(resp.Choices[0].Message.Content)
     }
+
     ```
 
 ## License
