@@ -24,32 +24,31 @@ ZhipuaiGo is a Go-based application that provides an interface to interact with 
     key = "YOUR_API_KEY"
     ```
 ## Usage
-   ```go
-    package main
+```go
+package main
 
-    import (
-        "fmt"
-        "github.com/vvxf/zhipuai_go/api"
-    )
+import (
+    "fmt"
+    "github.com/vvxf/zhipuai_go/api"
+)
 
-    func main() {
-        apiURL := "https://open.bigmodel.cn/api/paas/v4/chat/completions"
-        apiKey := ""
+func main() {
+    apiURL := "https://open.bigmodel.cn/api/paas/v4/chat/completions"
+    apiKey := ""
 
-        // init application
-        appService := api.NewLLMApplicationService(apiURL, apiKey)
+    // init application
+    appService := api.NewLLMApplicationService(apiURL, apiKey)
 
-        resp, _ := appService.HandleRequest("glm-4-flash", []api.Message{
-            {
-                Role:    "user",
-                Content: "Hello, llm!",
-            },
-        })
+    resp, _ := appService.HandleRequest("glm-4-flash", []api.Message{
+        {
+            Role:    "user",
+            Content: "Hello, llm!",
+        },
+    })
 
-        fmt.Println(resp.Choices[0].Message.Content)
-    }
-
-    ```
+    fmt.Println(resp.Choices[0].Message.Content)
+}
+```
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
