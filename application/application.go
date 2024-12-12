@@ -2,8 +2,9 @@ package application
 
 import (
 	"fmt"
-	"zhipuai_go/domain"
-	"zhipuai_go/infrastructure"
+
+	"github.com/vvxf/zhipuai_go/domain"
+	"github.com/vvxf/zhipuai_go/infrastructure"
 )
 
 type LLMApplicationService struct {

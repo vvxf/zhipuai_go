@@ -4,7 +4,8 @@ import (
 	"bytes"
 	"encoding/json"
 	"net/http"
-	"zhipuai_go/domain"
+
+	"github.com/vvxf/zhipuai_go/domain"
 )
 
 type LLMClient struct {
