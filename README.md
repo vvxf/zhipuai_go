@@ -1,5 +1,5 @@
 # zhipuai_go Project
-ZhipuaiGo is a Go-based application that provides an interface to interact with a Language Model API. This project is designed to be lightweight, efficient, and easy to use for handling text-based requests and generating responses.
+zhipuai_go is a Go-based application that provides an interface to interact with glm Language Model API. This project is designed to be lightweight, efficient, and easy to use for handling text-based requests and generating responses.
 ## Features
 - Integration with a Language Model API for generating responses.
 - JSON-based request and response format.
